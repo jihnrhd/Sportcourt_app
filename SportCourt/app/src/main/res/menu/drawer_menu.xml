@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/listlap"
+            android:title="Area Peminjaman"
+            android:icon="@drawable/ic_action_listlap"
+        />
+        <item
+            android:id="@+id/keranjang"
+            android:title="Keranjang"
+            android:icon="@drawable/ic_action_keranjang"
+            />
+        <item
+            android:id="@+id/transaksi"
+            android:title="Transaksi"
+            android:icon="@drawable/ic_action_transaksi"
+            />
+        <item
+            android:id="@+id/profil"
+            android:title="Profil"
+            android:icon="@drawable/ic_action_profil"
+            />
+        <item
+            android:id="@+id/aboutus"
+            android:title="About Us"
+            android:icon="@drawable/ic_action_aboutus"
+            />
+    </group>
+    <item android:title="Lain-Lain">
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_action_logout"
+                />
+        </menu>
+    </item>
+
+</menu>
