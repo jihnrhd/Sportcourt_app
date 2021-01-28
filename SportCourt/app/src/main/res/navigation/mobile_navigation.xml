@@ -7,19 +7,28 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.home.HomeFragment"
+        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.dashboard.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_keranjang"
+        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.dashboard.KeranjangFragment"
+        android:label="@string/menu_cart"
+        tools:layout="@layout/fragment_keranjang" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_transaksi"
+        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.dashboard.TransaksiFragment"
+        android:label="@string/menu_transaction"
+        tools:layout="@layout/fragment_transaksi" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.dashboard.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.PowerpuffGirls_TI2.sportcourt.ui.dashboard.AboutUsFragment"
+        android:label="@string/menu_about_us"
+        tools:layout="@layout/fragment_about_us" />
+
 </navigation>

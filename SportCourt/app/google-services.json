@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "437006528650",
+    "project_id": "tubesppb-f2bea",
+    "storage_bucket": "tubesppb-f2bea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437006528650:android:0175ac104bca1611db3d73",
+        "android_client_info": {
+          "package_name": "com.PowerpuffGirls_TI2.sportcourt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437006528650-koc2iejdbshhnrfit0f0r53oq0gec0ik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.PowerpuffGirls_TI2.sportcourt",
+            "certificate_hash": "82e39472317aeffb6cb4ccf6b0485eec45f2deec"
+          }
+        },
+        {
+          "client_id": "437006528650-vho6v2br2igacvritqhtfc6fkm06r9l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrdbuDtoa_bfch-Rc0fNh_etjJYc25Fsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437006528650-vho6v2br2igacvritqhtfc6fkm06r9l0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
