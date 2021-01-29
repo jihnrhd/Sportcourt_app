@@ -20,7 +20,6 @@ import com.PowerpuffGirls_TI2.sportcourt.MainActivity
 import com.PowerpuffGirls_TI2.sportcourt.R
 import com.PowerpuffGirls_TI2.sportcourt.model.Users
 import com.PowerpuffGirls_TI2.sportcourt.ui.setting.SettingActivity
-import com.PowerpuffGirls_TI2.sportcourt.utils.UsersID
 import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -73,9 +72,10 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun getData() {
+        val userID = FirebaseAuth.getInstance().currentUser!!.uid
         val db: FirebaseFirestore = FirebaseFirestore.getInstance()
         db.collection("users")
-            .whereEqualTo("id", UsersID.userID)
+            .whereEqualTo("id", userID)
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

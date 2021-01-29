@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.PowerpuffGirls_TI2.sportcourt.adapter.TransaksiAdapter
 import com.PowerpuffGirls_TI2.sportcourt.databinding.FragmentTransaksiBinding
 import com.PowerpuffGirls_TI2.sportcourt.model.Transaksi
-import com.PowerpuffGirls_TI2.sportcourt.utils.UsersID
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -40,10 +40,11 @@ class TransaksiFragment : Fragment() {
     }
 
     private fun getData() {
+        val userID = FirebaseAuth.getInstance().currentUser!!.uid
         val db: FirebaseFirestore = FirebaseFirestore.getInstance()
         val listTransaction = ArrayList<Transaksi>()
         db.collection("transaksi")
-            .whereEqualTo("id_peminjam", UsersID.userID)
+            .whereEqualTo("id_peminjam", userID)
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

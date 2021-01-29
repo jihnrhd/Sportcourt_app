@@ -11,7 +11,7 @@ import com.PowerpuffGirls_TI2.sportcourt.databinding.ActivityEditBookingBinding
 import com.PowerpuffGirls_TI2.sportcourt.local.LapanganEntity
 import com.PowerpuffGirls_TI2.sportcourt.local.LapanganRoomDatabase
 import com.PowerpuffGirls_TI2.sportcourt.utils.PriceFormat
-import com.PowerpuffGirls_TI2.sportcourt.utils.UsersID
+import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
 class EditBookingActivity : AppCompatActivity() {
@@ -75,8 +75,9 @@ class EditBookingActivity : AppCompatActivity() {
 
     @SuppressLint("SimpleDateFormat")
     private fun checkData() {
+        val userID = FirebaseAuth.getInstance().currentUser!!.uid
         val id = extraBooking.id
-        val id_peminjam = UsersID.userID
+        val id_peminjam = userID
         val nama = extraBooking.nama
         val namaPeminjam = binding.edtName.text.toString()
         val detail = extraBooking.detail

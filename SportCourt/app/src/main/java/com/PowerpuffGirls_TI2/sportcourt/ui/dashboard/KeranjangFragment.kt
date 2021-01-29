@@ -10,7 +10,7 @@ import com.PowerpuffGirls_TI2.sportcourt.adapter.KeranjangAdapter
 import com.PowerpuffGirls_TI2.sportcourt.databinding.FragmentKeranjangBinding
 import com.PowerpuffGirls_TI2.sportcourt.local.LapanganEntity
 import com.PowerpuffGirls_TI2.sportcourt.local.LapanganRoomDatabase
-import com.PowerpuffGirls_TI2.sportcourt.utils.UsersID
+import com.google.firebase.auth.FirebaseAuth
 
 
 class KeranjangFragment : Fragment() {
@@ -39,9 +39,10 @@ class KeranjangFragment : Fragment() {
     }
 
     private fun getCart() {
+        val userID = FirebaseAuth.getInstance().currentUser!!.uid
         val list: List<LapanganEntity> =
             LapanganRoomDatabase.getDatabase(requireContext()).lapanganDao()
-                .getAllLapangan(UsersID.userID)
+                .getAllLapangan(userID)
         if (list.isNotEmpty()) {
             binding.tvInformation.visibility = View.GONE
             binding.rvLapangan.visibility = View.VISIBLE
